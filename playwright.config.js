@@ -15,7 +15,7 @@ const config = {
   use: {
     actionTimeout: 0,
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     screenshot: 'on'
   },
 
