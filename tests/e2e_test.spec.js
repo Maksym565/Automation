@@ -91,3 +91,17 @@ test("Test #2 - Proceed to checkout and try to put credit card data.", async ({
     await expect(page.locator(locator.cart.errorContainer)).toBeVisible();
   });
 });
+
+test("Test #3 - Check that mega-menu is opening", async ({ page }) => {
+  await test.step("Click cart item to open mega-menu", async () => {
+    await page.locator(locator.mainPage.giftCards).first().click();
+  });
+
+  await test.step("After mega-menu is opening, clicking on each element in menu", async () => {
+    const items = page.locator(locator.mainPage.megaMenuItems);
+    for (let i = 0; i < (await items.count()); i++) {
+      await page.waitForTimeout(1000);
+      await items.nth(i).click();
+    }
+  });
+});

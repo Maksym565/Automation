@@ -2,6 +2,7 @@ const locator = {
   mainPage: {
     giftCards: "//*[text()='Cadeaubonnen']",
     acceptCookieBtn: "#CookieConsentIOAccept",
+    megaMenuItems: ".d5f0817d4922284f4183423cbd914755-css > div",
   },
   giftCard: {
     allInGift: "//*[text()='Alles-in-1 Keuze Cadeaukaart van cadeaubon.nl']",
