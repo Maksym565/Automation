@@ -25,6 +25,22 @@ npm run report # Report of latest local run will be opened with screenshot
 npm run format # Used prettier with default configuration to format code
 ```
 
+## Usage with docker
+
+1. Download && install docker
+2. Run the next following command to start framework with docker
+
+```bash
+# Build image 
+docker build -t playwright-docker .
+
+# Check that image created successfully
+docker image ls
+
+# Run test via created container
+docker run -it playwright-docker:latest npm run test
+```
+
 ## Additional info
 
 Report was stored in test-results && playwright-report folders. Added Prettier but with default configurations. Also added default gitHub workflow.
